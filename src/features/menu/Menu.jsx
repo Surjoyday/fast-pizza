@@ -10,7 +10,7 @@ export default function Menu() {
   // console.log(menu);
 
   return (
-    <ul>
+    <ul className="divide-y divide-stone-200 px-2">
       {menu.map((pizza) => (
         <MenuItem key={pizza.id} pizza={pizza} />
       ))}
@@ -19,7 +19,7 @@ export default function Menu() {
 }
 
 export async function loader(obj) {
-  console.log(obj);
+  // console.log(obj);
   const menu = await getMenu();
   return menu;
 }
